@@ -1,0 +1,537 @@
+/* web page header styling */
+    .header {
+        position:fixed;
+        background-color: white;
+        height: 150px;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding: 10px 16px;
+        text-align: center;
+        z-index: 1000; /* Set a higher z-index value so stays above everything else on the page */
+    }
+
+    .logo {
+        position:fixed;
+        top:0;
+        left:0;
+        width: 100px; /*  width */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    /* Styling for nav of hamburger menu */
+    nav {
+        padding: 1rem;
+        display: flex;
+        background-color: transparent;
+    }
+
+    /* Styling for Hamburger menu */
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        margin-left: auto; /* gets menu to go right of nav bar */
+        position: relative; /* children need to be positioned relative to parents */
+    }
+
+    /* Styling for Hamburger menu bars */
+    .ham-menu span{
+        height: 5px;
+        width: 100%;
+        background-color: black;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease; /* transition */
+    }
+
+    .ham-menu span:nth-child(1){
+        top: 25%; /* positioning so bars aren't on top of each other */
+    }
+
+    .ham-menu span:nth-child(3){
+        top: 75%; /* positioning so bars aren't on top of each other */
+    }
+
+    /* Styling for ham menu when clicked */
+    /* slant top bar to make half of the x button */
+    .ham-menu.active span:nth-child(1){
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .ham-menu.active span:nth-child(2){
+        opacity: 0; /* Hide middle bar */
+    }
+    /* Slant the bottom bar to make the other half of the x button */
+    .ham-menu.active span:nth-child(3){
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg); /* transition to slant */
+    }
+
+    /* Styling for Hamburger menu item */
+    .off-screen-menu {
+        background-color: transparent;
+        height: 20vh;
+        width: 100%;
+        max-width: 350px;
+        position: fixed;
+        top: 0;
+        right: -450px; /* Initially hidden off-screen */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        font-size: 1.5rem;
+        transition: .3s ease; /* animation for transition */
+    }
+
+    /* Styling for Hamburger menu item when active*/
+    .off-screen-menu.active {
+        right: 0; /* position on screen */
+    }
+
+    .off-screen-menu a {
+        font-size: 16px;
+        text-decoration: none;
+        color: black; /* text color here */
+    }
+
+    /* Add hover effect if desired */
+    .off-screen-menu a:hover {
+        color: #1376b2; /* hover color */
+    }
+
+    /* Styling for off-screen menu items */
+    .off-screen-menu ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+    }
+
+/* background styling for body of the page */
+body {
+  background-image: url("https://img.freepik.com/free-vector/geometric-pattern-background-vector-white_53876-126684.jpg?w=360");
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+/* Styling for all sections */
+.section {
+  padding: 50px 0;
+}
+
+.hide {
+    opacity: 0;
+    transition: all 1s; /* dynamic transition onto the page */
+    transform: translateX(-100%); /* dynamic transition onto the page */
+}
+
+/* Styling for transitioning section onto page */
+.show {
+  opacity: 1;
+  transform: translateX(-0%);
+}
+
+/* Styling for all containers */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* Intro Styling */
+.hero {
+  height: 800px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Intro Styling */
+.head-shot {
+    width: 300px; /* Width of the headshot */
+    height: 300px; /* Height of the headshot */
+    border-radius: 50%; /* Make the image circular */
+    margin-top: 50px; /* Add some space between the headshot and header text */
+    margin-bottom: 30px; /* Add some space between the headshot and header text */
+    border: 3px solid black; /* Add a 2px solid black border around the image */
+}
+
+.my-intro {
+    max-width: 1000px; /* Max width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px;
+}
+
+/* Styling for name in hero */
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #3b444b;
+}
+
+/* Styling for intro text under name */
+.hero h2 {
+  margin-bottom: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #3b444b;
+}
+
+
+/* Styling for about me section */
+.section.about-me {
+    position: relative; /* Ensure the section is positioned relatively */
+    background-color: #0071c5;
+    color: #fff;
+    text-align: center;
+    padding: 100px 15px;
+}
+/* positioning of programming language icons div */
+.programming-languages {
+    margin-top: 20px; /* Margin from the header */
+    justify-content: center; /* Center content */
+    display: flex;
+}
+
+.programming-languages ion-icon {
+    margin: 0 20px; /* spacing between icons */
+    font-size: 7rem; /* Set the size for the icons */
+}
+
+.fa-brands.fa-java {
+    margin-right: 20px; /*spacing to the right of the Java icon */
+    font-size: 6.5rem; /* Set the size for the icons */
+}
+
+.language-icon:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.language-icon:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.language-icon:nth-child(4){
+    transition-delay: 600ms;
+}
+
+.language-icon:nth-child(5){
+    transition-delay: 800ms;
+}
+
+/* Add margin to paragraphs in the about-me section */
+.section.about-me p {
+  margin: 25px 0;
+  font-size: 18px;
+}
+
+/* Add margin to paragraphs in the about-me section */
+.section.my-projects {
+    padding-bottom: 100px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #ff6602;
+    color: white; /* text color */
+  }  
+
+/* My Projects Section Header text */
+.my-projects h2 {
+  text-align: right;
+  color: white; /* text color */
+}
+
+.project-header {
+    margin-top: 35px;
+    margin-bottom:25px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+    grid-gap: 30px; /* Gap between boxes */
+}
+
+.project-box {
+    border: 1px solid #ddd; /* Add borders or other styling to the boxes */
+    border-radius: 10px; /* Add border-radius to make the corners rounded */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Add position relative for absolute positioning of child elements */
+    background-size: cover; /* Ensure the background image covers the entire box */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    overflow: hidden; /* ensures that buttons doesn't overflow outside the box */
+}
+
+/* Use the padding-bottom trick to create a square shape */
+.project-box::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%; /* Set the padding to create a square shape (100% of width) */
+}
+
+.button-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-link:hover {
+    color: black; /* Text color */
+    background-color: #0056b3; /* Hover color */
+}
+
+/*  Social media icon styling */
+.project-link {
+    color: white;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.project-link.youtube:hover {
+    color: #ff0100;
+}
+
+/* Styling when hovering on social link icon */
+.project-link.github:hover {
+    color: #238636;
+}
+
+.project-link ion-icon {
+    font-size: 56px; /* font size of social media logos */
+}
+
+/* Contact Us Section */
+.contact-me {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* Contact Us Section Header text */
+.contact-me h2 {
+  text-align: center;
+  color: #3b444b; /* text color */
+}
+
+/* Contact Us Section body text */
+.contact-me p {
+  text-align: center;
+  color: #3b444b; /* text color */
+}
+
+/* stying Contact us form*/
+.contact-us {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.contact-us label {
+  margin-top: 10px;
+  color: #3b444b; /* text color */
+}
+
+.contact-us input,
+.contact-us textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-us button:hover {
+  background-color: #005c9d;
+}
+
+.social-icons-mobile{
+    display: flex;
+    justify-content: center; /* position in center of the page */
+    align-items: center; /* position in center of the page */
+    height: 150px; /* Set height to 100% of the viewport height */
+    margin: 20px;
+}
+
+/*  Social media icon styling */
+.social-link-mobile {
+    color: black;
+    transition: color 0.2s;
+    text-decoration: none;
+    margin: 0 10px; /* Adjust the spacing between icons if needed */
+}
+
+.social-link-mobile ion-icon {
+    font-size: 72px; /* font size of social media logos */
+}
+
+/*  LinkedIn icon hover colors */
+.social-link-mobile.linkedIn:hover {
+    color: #0a66c2;
+}
+
+/* Github icon hover colors */
+.social-link-mobile.gitHub:hover {
+    color: #238636;
+}
+
+/* Footer Styling */
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background-color: white;
+}
+
+.footer-logo {
+  left: 0;
+  padding: 10px 16px;
+}
+
+.footer-top {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 16px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.bottomnav {
+  text-align: center;
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 10px 16px;
+}
+
+/* Mobile view formatting and styling */
+@media only screen and (max-width: 767px) {
+    /* web page header styling */
+    .header {
+        height: 120px;
+    }
+
+    .off-screen-menu {
+        background-color: transparent;
+        height: 100px;
+    }
+
+    .off-screen-menu a {
+        font-size: 20px;
+    }
+
+    .about-me h2 {
+        font-size: 30px;
+    }
+
+    .programming-languages {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center; /* Center content horizontally */
+        margin-top: 20px;
+    }
+
+    .programming-languages .language-icon,
+    .programming-languages .fa-java {
+        width: calc(33.33% - 20px); /* Width for three items in a row with 20px spacing */
+        margin: 0 10px 20px; /* spacing */
+    }
+
+    /* width for the first two items in the second row */
+    .programming-languages .language-icon:nth-child(4),
+    .programming-languages .language-icon:nth-child(5) {
+        width: calc(40% - 20px);
+    }
+
+    /* My Projects section styling */
+    .section.my-projects{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .my-projects {
+        background-color: #ff6602;
+        text-align: center;
+        color: white; /* text color */
+    }
+
+    /* Mobile My Projects Section Header text */
+    .my-projects h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Change to a two column for mobile view */
+        grid-gap: 20px; /* ap between boxes */
+    }
+
+    .project-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Ensure relative positioning for absolute children */
+        box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.06); 
+    }
+
+    .button-link {
+        margin-bottom: auto;
+        background-color: #007bff; /* Button color */
+        color: #fff; /* Text color */
+        border-radius: 5px;
+        width: 90%;
+        text-align: center;
+        z-index: 1; /* Ensure the button is above the absolute positioned links */
+    }
+
+    .project-link {
+        position: absolute;
+        bottom: 10px; /* distance from bottomo of project box */
+        left: 50%; /* center */
+        transform: translateX(-50%);
+        z-index: 1; /* Ensure the links are above the background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Occupy full width of the container */
+    }
+
+    .project-link ion-icon {
+        font-size: 32px; /* font size of social media logos */
+        margin-right: 5px;
+    }
+
+    /* Center the icons when there's only one */
+    .project-box .project-link:not(:last-child) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Contact Us Section Header text */
+    .contact-me h2 {
+        font-size: 36px;
+        text-align: center;
+        color: #3b444b; /* text color */
+    }
+}

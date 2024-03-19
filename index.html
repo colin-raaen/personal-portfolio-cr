@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Colin Raaen</title>
+
+        <!-- Import Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Import CSS and JS Files -->
+        <link href="styles.css" rel="stylesheet">
+        <script src="homepage.js"></script>
+
+        <!-- Website Tab icon/image -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Allow Mobile responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Import Awesome 5 icons -->
+        <script src="https://kit.fontawesome.com/3c19d22a4f.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body id="index">
+        <div class="header" id="myHeader">
+            <a href="#index">
+                <img class="logo" src="images/cr-logo-design.avif" alt="logo">
+            </a>
+
+            <!-- Navigation menu that's initially off-screen, appears when hitting the hamburger menu -->
+            <div class="off-screen-menu">
+                <ul>
+                    <li><a href="#index">HOME</a></li>
+                    <li><a href="#about-me">ABOUT ME</a></li>
+                    <li><a href="#my-projects">PROJECTS</a></li>
+                    <li><a href="#contact-me">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger menu -->
+            <nav>
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="section hero">
+            <img class="head-shot" src="images/CR-headshot.png" alt="logo">
+            <div class="container">
+                <h1><b>Colin Raaen </b></h1>
+                <h2>Full-Stack Software Engineer based in New York City</h2>
+
+            </div>
+        </div>
+
+        <section class="section about-me hide" id="about-me">
+            <div class="container">
+                <h2><b>Strong understanding of the fundamentals</b></h2>
+                <div class="programming-languages">
+                    <ion-icon class="language-icon hide" name="logo-javascript"></ion-icon>
+                    <i class="fa-brands fa-java hide"></i>
+                    <ion-icon class="language-icon hide" name="logo-python"></ion-icon>
+                    <ion-icon class="language-icon hide" name="logo-html5"></ion-icon>
+                    <ion-icon class="language-icon hide" name="logo-css3"></ion-icon>
+                </div>
+                <p class="about-me-paragraph hide">My background includes working in the tech industry for past 8 years,
+                    currently as a presales Solution Engineer at Salesforce.
+                    As a developer I have experience in a full-stack environment, with a specialized focus
+                    in Java and JavaScript.
+                </p>
+
+                <p class="about-me-paragraph hide"> I bring a unique perspective as a software developer, having worked hands on with customers
+                    for the past 8 years understanding their pain points, and ultimately building and presenting future-state
+                    solutions.
+                </p>
+
+                <p class="about-me-paragraph hide"> I have a proven track record collaborating within and across teams, building solutions that delight
+                    customers, and an ability to learn quickly.
+                </p>
+
+            </div>
+
+
+
+        </section>
+
+        <section class="section my-projects hide">
+            <div class="container" id="my-projects">
+                <h2 class="project-header hide"><b>My Projects</b></h2>
+                <p class="project-header hide">Click on the links to check out personal projects that I've built</p>
+
+                <div class="project-grid">
+                    <!-- Box Wellness App -->
+                    <div class="project-box hide" style="background-image: url('images/wellness_app.png');">
+
+                        <a class="button-link hide">Wellness App</a>
+
+                        <!--Hyperlink to CS50 Wellness App Youtube video -->
+                        <a class="project-link youtube" href="https://www.youtube.com/watch?v=hsnhms7nxcI&t=204s" target="_blank">
+                            <ion-icon class="icon hide" name="logo-youtube"></ion-icon>
+                        </a>
+
+                        <!--Hyperlink to CS50 Wellness App GitHub repo -->
+                        <a class="project-link github" href="https://github.com/craaen10/CS50-wellness-app" target="_blank">
+                            <ion-icon class="icon hide" name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+
+                    <!-- Finance App -->
+                    <div class="project-box hide" style="background-image: url('images/finance_app.avif');">
+
+                        <a class="button-link hide">Finance App</a>
+
+                    </div>
+
+                    <!-- Box To-do List App -->
+                    <div class="project-box hide" style="background-image: url('images/to_do_app.png');">
+                        <a class="button-link hide" href="/to-do-list/to-do.html">To-Do App</a>
+
+                        <!--Hyperlink to GitHub repo -->
+                        <a class="project-link github" href="https://github.com/craaen10/to-do-list" target="_blank">
+                            <ion-icon class="icon hide" name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+
+                    <!-- Box note-taking app -->
+                    <div class="project-box hide" style="background-image: url('images/note_taking_app.jpeg');">
+                        <a class="button-link hide" href="/note-taking-app/note-app.html">Note Taking App</a>
+
+                        <!--Hyperlink to GitHub repo -->
+                        <a class="project-link github" href="https://github.com/craaen10/note-taking-app" target="_blank">
+                            <ion-icon class="icon hide" name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+
+                    <!-- Box Battleship -->
+                    <div class="project-box hide" style="background-image: url('images/battleship2.png');">
+                        <a class="button-link hide" href="../battleship/battleship.html">Battleship</a>
+
+                        <!--Hyperlink to GitHub repo -->
+                        <a class="project-link github" href="" target="_blank">
+                            <ion-icon class="icon hide" name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+
+                    <!-- Box Tic-Tac-Toe -->
+                    <div class="project-box hide" style="background-image: url('images/tic_tac_toe.png');">
+                        <a class="button-link hide" href="../tic-tac-toe/webapp/tic-tac-toe.html">TIC TAC TOE</a>
+
+                        <!--Hyperlink to GitHub repo -->
+                        <a class="project-link github" href="https://github.com/craaen10/tic-tac-toe" target="_blank">
+                            <ion-icon class="icon hide" name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+
+                    <!-- Box rock-paper-scissors -->
+                    <div class="project-box hide" style="background-image: url('images/rock_paper_scissors.png');">
+                        <a class="button-link hide" href="../rock-paper-scissors/rock-paper-scissors.html">Rock Paper Scissors</a>
+
+                        <!--Hyperlink to GitHub repo -->
+                        <a class="project-link github" href="https://github.com/craaen10/rock-paper-scissors" target="_blank">
+                            <ion-icon class="icon hide" name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+
+                    <!-- Box watch app -->
+                    <div class="project-box hide" style="background-image: url('images/watch-app.png');">
+                        <a class="button-link hide" href="../watch-app/watch.html">Watch App</a>
+
+                        <!--Hyperlink to GitHub repo -->
+                        <a class="project-link github"  target="_blank">
+                            <ion-icon class="icon hide" name="logo-github"></ion-icon>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-me hide">
+            <div class="container" id="contact-me">
+                <h2><b>Get in touch</b></h2>
+                    <p>Fill out your details below to send me a message direct via email</p>
+                <div class="contact-us">
+                    <form class="contact-us-form" id="freeForm" action="https://formsubmit.co/colin.raaen@gmail.com" method="POST">
+                        <!-- honeypot-->
+                        <input type="text" name="_honey" style="display: none;">
+
+                        <!-- disable Captcha-->
+                        <input type="hidden" name="_captcha" value="false">
+
+                        
+
+                        <div class="contactus-name">
+                            <label for="full-name" class="form-label">Full Name</label>
+                            <input class="input-field" type="text" autocomplete="off" autofocus placeholder="First/Last&nbsp;Name" id="full-name" required>
+                        </div>
+                        <div class="contactus-email">
+                            <label for="email" class="form-label">Email</label>
+                            <input class="input-field" id="email" name="email" type="text" autocomplete="off" autofocus placeholder="my.name@example.com" required>
+                        </div>
+                        <div class="contactus-phone">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input class="input-field" id="phone" name="phone" type="text" autocomplete="off" autofocus placeholder="+1 (XXX)-XXX-XXXX">
+                        </div>
+                        <div class="contactus-comment">
+                            <label for="comments" class="form-label">Additional Questions/Comments</label>
+                            <textarea class="input-field" id="comments" name="comments" autocomplete="off" autofocus placeholder="Any additional questions or comments you want to provide."
+                                       rows="4" cols="50"></textarea>
+                        </div>
+                        <div class="submit text-center">
+                            <button class="btn btn-primary" type="submit" name="btnSubmit" id="btnSubmit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--Hyperlink to social media and github profiles -->
+            <div class="social-icons-mobile">
+                <!--Hyperlink to LinkedIn -->
+                <a class="social-link-mobile linkedIn" href="https://www.linkedin.com/in/colin-raaen-3669701b/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <!--Hyperlink to Github -->
+                <a class="social-link-mobile gitHub" href="https://github.com/craaen10" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer-top">Handcrafted by me</div>
+            <div class="bottomnav">
+                <a class="active" href="#index">HOME</a>
+                <a href="#about-me">ABOUT ME</a>
+                <a href="#my-projects">MY PROJECTS</a>
+            </div>
+        </section>
+
+        <!-- import statements for icon.io icon catalog -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
